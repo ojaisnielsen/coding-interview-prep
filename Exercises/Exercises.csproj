@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1BDD255E-4D26-424F-B7F9-AB4BA124F3B4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Exercises</RootNamespace>
+    <AssemblyName>Exercises</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BinarySearchTree\Extensions.cs" />
+    <Compile Include="BinarySearchTree\Implementations\SimpleBinarySearchTree.cs" />
+    <Compile Include="BinarySearchTree\Model\IBinarySearchTree.cs" />
+    <Compile Include="EditDistance\Implementations\MemoizedEditDistance.cs" />
+    <Compile Include="EditDistance\Model\IEditDistance.cs" />
+    <Compile Include="GraphTraversal\Implementations\AStarTraverse.cs" />
+    <Compile Include="GraphTraversal\Implementations\BreadthFirstTraverse.cs" />
+    <Compile Include="GraphTraversal\Implementations\DepthFirstTraverse.cs" />
+    <Compile Include="GraphTraversal\Implementations\SimpleGraph.cs" />
+    <Compile Include="GraphTraversal\Model\IMetricGraph.cs" />
+    <Compile Include="GraphTraversal\Model\IWeightedMetricGraph.cs" />
+    <Compile Include="GraphTraversal\Model\IGraph.cs" />
+    <Compile Include="GraphTraversal\Model\IGraphTraverse.cs" />
+    <Compile Include="GraphTraversal\Implementations\EuclidianGridGraph.cs" />
+    <Compile Include="GraphTraversal\Model\IWeightedGraph.cs" />
+    <Compile Include="GraphTraversal\Implementations\SimpleTraverseBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sorting\Extensions.cs" />
+    <Compile Include="Sorting\Model\ISort.cs" />
+    <Compile Include="Sorting\Implementations\MergeSort.cs" />
+    <Compile Include="Sorting\Implementations\QuickSort.cs" />
+    <Compile Include="StringMatching\Implementations\AutomatonStringMatch.cs" />
+    <Compile Include="StringMatching\Extensions.cs" />
+    <Compile Include="StringMatching\Model\IStringMatch.cs" />
+    <Compile Include="Trie\Extensions.cs" />
+    <Compile Include="Trie\Implementations\SimpleTrie.cs" />
+    <Compile Include="Trie\Model\ITrie.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
